@@ -1,9 +1,13 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
+    dataBinding {
+        enabled = true
+    }
     defaultConfig {
         applicationId "net.yuzumone.sojourner"
         minSdkVersion 25
@@ -28,4 +32,5 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile "com.android.support:appcompat-v7:$support_lib_version"
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    kapt 'com.android.databinding:compiler:2.3.3'
 }
