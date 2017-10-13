@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Sojourner</string>
     <string name="hack_the_portal">Hack the portal</string>
+    <string name="end">The end...</string>
 </resources>
