@@ -2,6 +2,7 @@ package net.yuzumone.sojourner
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
+import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import net.yuzumone.sojourner.databinding.ActivityMainBinding
 import net.yuzumone.sojourner.util.PrefUtil
@@ -11,6 +12,13 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val preference by lazy { PrefUtil(this) }
+    private val handler = Handler()
+    private val run = object : Runnable {
+        override fun run() {
+            init()
+            handler.postDelayed(this, 1000)
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +27,16 @@ class MainActivity : AppCompatActivity() {
             preference.hackDate = Date().time
             update()
         }
-        init()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        handler.post(run)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        handler.removeCallbacks(run)
     }
 
     private fun init() {
