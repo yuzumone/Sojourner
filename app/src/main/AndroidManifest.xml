@@ -22,6 +22,15 @@
             android:name=".ShortcutsActivity"
             android:theme="@style/TransparentTheme"
             />
+        <service
+            android:name=".service.SojournerTileService"
+            android:icon="@drawable/ic_sojourner"
+            android:label="@string/hack_the_portal"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
