@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import net.yuzumone.sojourner.databinding.ActivityMainBinding
+import net.yuzumone.sojourner.service.SojournerJobService
 import net.yuzumone.sojourner.util.PrefUtil
 import java.util.*
 
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
             preference.hackDate = Date().time
             update()
         }
+        SojournerJobService.schedule(this)
     }
 
     override fun onResume() {
