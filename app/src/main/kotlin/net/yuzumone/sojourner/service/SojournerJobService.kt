@@ -35,7 +35,6 @@ class SojournerJobService : JobService() {
             if (check()) {
                 notification()
             }
-            jobFinished(params, true)
         }).start()
         return true
     }
