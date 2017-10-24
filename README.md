@@ -8,6 +8,11 @@
 ## Overview
 This is an assistant application for keeping Sojourner of Ingress.
 
+## Screenshots
+| Main | QuickSettings | AppShortcuts |
+| -------- | ------ | ----- |
+| ![](./screenshots/1.png) | ![](./screenshots/2.png) | ![](./screenshots/3.png) |
+
 ## Libraries
 This project uses some libraries.
 
