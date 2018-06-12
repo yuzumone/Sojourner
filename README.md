@@ -3,7 +3,7 @@
 [![language kotlin](https://img.shields.io/badge/language-kotlin-green.svg)](#)
 [![minSdkVersion 25](https://img.shields.io/badge/minSdkVersion-25-red.svg)](#)
 [![compileSdkVersion 27](https://img.shields.io/badge/compileSdkVersion-27-yellow.svg)](#)
-[![version v1.0.1](https://img.shields.io/badge/version-v1.0.1-blue.svg)](#)
+[![version v1.0.2](https://img.shields.io/badge/version-v1.0.2-blue.svg)](#)
 
 ## Overview
 This is an assistant application for keeping Sojourner of Ingress.
